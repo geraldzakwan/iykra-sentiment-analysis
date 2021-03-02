@@ -17,7 +17,7 @@ The performance and the inference time will be shown as well.
 
 - Your task is to modify the `train.py` and/or `preprocess.py` and train your own model.
 
-- Search for "# NOTE" in both files where I put the part of the code you can modify (but feel free to modify other parts too!).
+- Search for `"# NOTE"` in both files where I put the part of the code I suggest you to modify (but feel free to modify other parts too!).
 
 - The goal is to reduce the total inference time without losing too much performance. Say you can reduce the inference time by 20% with only losing 2% accuracy. That's respectable.
 
@@ -27,7 +27,7 @@ The performance and the inference time will be shown as well.
 
 - Some hint to get you kicking:
 
-1. Take a look into `TfidfVectorizer` hyperparameters, what can you change to improve the speed?
+1. Take a look into `TfidfVectorizer` hyperparameters, what can you change/add to improve the speed?
 
 2. Explore other kind of text vectorizer such as: https://scikit-learn.org/stable/modules/generated/sklearn.feature_extraction.text.CountVectorizer.html.
 
