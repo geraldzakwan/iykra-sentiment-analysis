@@ -69,6 +69,18 @@ curl --location --request POST 'http://localhost:5000/classify' \
 }
 ```
 
+- You can change the value of the `text` field with any English sentence to see the predicted sentiment.
+
+- Alternatively, if the above doesn't work for you, you can access the model that I've deployed on `Heroku` by running this command:
+
+```
+curl --location --request POST 'https://iykra-sentiment-analysis-geral.herokuapp.com/classify' \
+--header 'Content-Type: application/json' \
+--data-raw '{
+    "text": "im glad ur doing well"
+}'
+```
+
 ### Postman
 
 - We will use `Postman` to test our deployed ML model.
