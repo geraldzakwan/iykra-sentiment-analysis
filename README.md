@@ -42,15 +42,43 @@ This repo is used as a resource for model deployment sharing at `IYKRA` (https:/
 - (Optional) If you're familiar with `virtualenv`, run the above command inside your virtual environment.
   Please refer here: https://www.petanikode.com/python-virtualenv/.
 
+- Try to run:
+
+`python3 app.py` or `python app.py`
+
+- See if it's running okay. If it's running okay try to run this on your terminal:
+
+```
+curl --location --request POST 'http://localhost:5000/classify' \
+--header 'Content-Type: application/json' \
+--data-raw '{
+    "text": "im glad ur doing well"
+}'
+```
+
 ### Postman
 
 - We will use `Postman` to test our deployed ML model.
 
 - Install `Postman` (https://learning.postman.com/docs/getting-started/installation-and-updates/).
 
+### Heroku
+
+- Please create a `Heroku` account: (https://www.heroku.com/).
+
+- Install `Heroku CLI` (https://devcenter.heroku.com/articles/heroku-command-line).
+
+- (Optional): Read these two amazing resources on deploying Flask to Heroku:
+
+https://stackabuse.com/deploying-a-flask-application-to-heroku/
+
+https://www.jcchouinard.com/deploy-a-flask-app-on-heroku/
+
+- We will follow closely the above resource in the training session.
+
 ### Dataset
 
-Please refer here: https://github.com/geraldzakwan/iykra-sentiment-analysis/tree/main/data
+- Please refer here: https://github.com/geraldzakwan/iykra-sentiment-analysis/tree/main/data.
 
 ## Questions
 
