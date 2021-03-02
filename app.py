@@ -68,5 +68,8 @@ if __name__ == "__main__":
 
     port = int(environ.get("PORT"))
     debug = environ.get("DEBUG")
-    
-    app.run(threaded=True, port=port, debug=debug)
+
+    if debug == "True":
+        app.run(threaded=True, port=port, debug=True)
+    else:
+        app.run(threaded=True, port=port, debug=False)
