@@ -30,7 +30,6 @@ if __name__ == '__main__':
 
     get_pred_statistics(y, pred)
 
-    print("*"*50)
-    print()
-
     print("Your total inference time is: {} seconds".format(time.time() - start))
+
+    print("*"*50)
