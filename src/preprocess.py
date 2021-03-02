@@ -35,6 +35,12 @@ def preprocess(tweet, do_stem=True):
                        ':\'(', ':"(', ':((','D:' ] ),\
     ]
 
+    def replace_parenthesis(arr):
+       return [text.replace(')', '[)}\]]').replace('(', '[({\[]') for text in arr]
+
+    def join_parenthesis(arr):
+        return '(' + '|'.join( arr ) + ')'
+
     # Build emoticon regex
     emoticons_regex = [(repl, re.compile(join_parenthesis(replace_parenthesis(regx)))) \
                         for (repl, regx) in emoticons]
@@ -49,21 +55,16 @@ def preprocess(tweet, do_stem=True):
 
     return tweet
 
-def replace_parenthesis(arr):
-   return [text.replace(')', '[)}\]]').replace('(', '[({\[]') for text in arr]
-
-def join_parenthesis(arr):
-    return '(' + '|'.join( arr ) + ')'
-
 # Stem using PorterStemmer from NLTK
 def stem(tweet):
+    # NOTE: You can play with this, i.e. try other stemmer types!
     stemmer = nltk.stem.PorterStemmer()
-    tweet_stem = ''
 
+    # Simply tokenize by space
     words = [word for word in tweet.split()]
 
+    # Stem each token
     words = [stemmer.stem(w) for w in words]
 
-    tweet_stem = ' '.join(words)
-
-    return tweet_stem
+    # Rejoin them
+    return ' '.join(words)

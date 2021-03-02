@@ -35,9 +35,11 @@ def prepare_data(X, y, test_size):
     return X_train, X_test, y_train, y_test
 
 def extract_feature(X, vec, fit):
+    # Fit means that we train our extractor using the data (do this with train data)
     if fit:
         return vec.fit_transform(X)
 
+    # No fit means that we only apply extraction to the data (do this with test data)
     return vec.transform(X)
 
 def train(cls, X, y):
@@ -60,6 +62,7 @@ def get_pred_statistics(y, pred):
     print(metrics.classification_report(y, pred))
     print()
 
+# Save both the feature extractor and the classifier with pickle
 def save(feat_ext, cls, cls_filepath=CLASSIFIER_FILEPATH, feat_ext_filepath=FEATURE_EXTRACTOR_FILEPATH):
     with open(feat_ext_filepath, 'wb') as outfile:
         pickle.dump(feat_ext, outfile, protocol=pickle.HIGHEST_PROTOCOL)
@@ -77,14 +80,14 @@ if __name__ == '__main__':
     X_train, X_test, y_train, y_test = prepare_data(X, y, test_size=0.2)
 
     # Use TF-IDF as feature extractor
-    # NOTE: You can play with this!
+    # NOTE: You can play with this, i.e. try other extractors or change hyperparameters!
     extractor = TfidfVectorizer(min_df=5, use_idf=True, ngram_range=(1, 4))
 
     # Apply feature extractor, e.g. TF-IDF, on train data
     X_train_vec = extract_feature(X_train, extractor, fit=True)
 
     # Define your classifier, e.g. Naive Bayes
-    # NOTE: You can play with this!
+    # NOTE: You can play with this, i.e. try other classifiers or change hyperparameters!
     classifier = MultinomialNB()
 
     train(classifier, X_train_vec, y_train)
