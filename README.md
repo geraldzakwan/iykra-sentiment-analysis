@@ -46,7 +46,7 @@ This repo is used as a resource for model deployment sharing at `IYKRA` (https:/
 
 `python3 app.py` or `python app.py`
 
-- See if it's running okay. If it's running okay try to run this on your terminal:
+- See if it's running okay. If it's running okay then run this on your terminal:
 
 ```
 curl --location --request POST 'http://localhost:5000/classify' \
@@ -87,3 +87,6 @@ https://www.jcchouinard.com/deploy-a-flask-app-on-heroku/
 - Explain your difficulties/errors and provide screenshot if any.
 
 - Thanks and see you Friday!
+
+Cheers,
+Geral
