@@ -8,10 +8,12 @@ This repo is used as a resource for model deployment sharing at `IYKRA` (https:/
 
 - Take a look at the file `inference.py`. Run it:
 
-`python3 inference.py` or `python inference.py`
+`python3 inference.py 10` or `python inference.py 10`
 
 - It will load the saved extractor and model file and do inference on the whole data locally.
 The performance and the inference time will be shown as well.
+
+- For the experiment, do it 10 times (or more, feel free to change it) and take the average inference time. This is to make the result more objective.
 
 - Screenshot/copy the result.
 
