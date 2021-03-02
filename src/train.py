@@ -92,7 +92,7 @@ if __name__ == '__main__':
 
     train(classifier, X_train_vec, y_train)
 
-    save(classifier, extractor)
+    save(extractor, classifier)
 
     print("*"*50)
     print()

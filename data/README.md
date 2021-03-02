@@ -9,3 +9,5 @@
 - But, to make it quick for everyone, I use only `100k` tweets (see `tweets_100k.csv` file).
 
 - Half of them are positive sentiments and another half are negative sentiments.
+
+- In the CSV file, positive sentiments are denoted by label 4, meanwhile negative sentiments are denoted by 0.

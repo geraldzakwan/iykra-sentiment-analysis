@@ -48,6 +48,10 @@ This repo is used as a resource for model deployment sharing at `IYKRA` (https:/
 
 - Install `Postman` (https://learning.postman.com/docs/getting-started/installation-and-updates/).
 
+### Dataset
+
+Please refer here: https://github.com/geraldzakwan/iykra-sentiment-analysis/tree/main/data
+
 ## Questions
 
 - If you have difficulties or find some errors following the above instructions, please email me (`geraldi.dzakwan@gmail.com`) with email subject: `IYKRA Getting Ready - {Your name}`, e.g. `IYKRA Getting Ready - Geraldi Dzakwan`.
