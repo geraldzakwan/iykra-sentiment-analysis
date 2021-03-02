@@ -89,4 +89,5 @@ https://www.jcchouinard.com/deploy-a-flask-app-on-heroku/
 - Thanks and see you Friday!
 
 Cheers,
+
 Geral
