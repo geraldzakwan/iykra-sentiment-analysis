@@ -1,8 +1,8 @@
 # IYKRA Sentiment Analysis
 
-A simple sentiment analysis module wrapped in Flask.
+A simple sentiment analysis module wrapped in `Flask`.
 
-This repo is used as a resource for model deployment sharing at IYKRA.
+This repo is used as a resource for model deployment sharing at `IYKRA` (https://iykra.com/).
 
 ## Getting Ready
 
@@ -50,4 +50,8 @@ This repo is used as a resource for model deployment sharing at IYKRA.
 
 ## Questions
 
-If you have difficulties or find some errors following the above instructions, please email me (`geraldi.dzakwan@gmail.com`) with email subject: `IYKRA Getting Ready - {Your name}`, e.g. `IYKRA Getting Ready - Geraldi Dzakwan`. Explain your difficulties/errors and provide screenshot if any. Thanks and see you Friday!
+- If you have difficulties or find some errors following the above instructions, please email me (`geraldi.dzakwan@gmail.com`) with email subject: `IYKRA Getting Ready - {Your name}`, e.g. `IYKRA Getting Ready - Geraldi Dzakwan`.
+
+- Explain your difficulties/errors and provide screenshot if any.
+
+- Thanks and see you Friday!
