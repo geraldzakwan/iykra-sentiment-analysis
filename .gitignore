@@ -1,0 +1,6 @@
+.DS_Store
+*.pyc
+*__pycache__*
+*.sqlite3
+.env
+data/tweets.csv
