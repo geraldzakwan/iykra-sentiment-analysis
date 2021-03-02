@@ -4,130 +4,46 @@ A simple sentiment analysis module wrapped in `Flask`.
 
 This repo is used as a resource for model deployment sharing at `IYKRA` (https://iykra.com/).
 
-## Getting Ready
+## Assignment
 
-### Git
+- Take a look at the file `inference.py`. Run it:
 
-- You will use Git to access this code base and to submit the assignment later.
+`python3 inference.py` or `python inference.py`
 
-- Install Git: https://www.atlassian.com/git/tutorials/install-git.
+- It will load the saved extractor and model file and do inference on the whole data locally.
+The performance and the inference time will be shown as well.
 
-- Learn a bit about Git: https://opensource.com/article/18/1/step-step-guide-git.
+- Screenshot/copy the result.
 
-- (Optional) If you want to dive deeper: https://towardsdatascience.com/getting-started-with-git-and-github-6fcd0f2d4ac6.
+- Your task is to modify the `train.py` and/or `preprocess.py` and train your own model.
 
-- Clone this repo by running the following command inside your terminal:
+- Search for "# NOTE" in both files where I put the part of the code you can modify (but feel free to modify other parts too!).
 
-`git clone https://github.com/geraldzakwan/iykra-sentiment-analysis`
+- The goal is to reduce the total inference time without losing too much performance. Say you can reduce the inference time by 20% with only losing 2% accuracy. That's respectable.
 
-- It will create `iykra-sentiment-analysis` directory, please remember the path to this directory.
+- Report your experiment result and detail on what you do in 1 page PDF file (yes, be concise!). Explain why your solution works!
 
-### Python
+- If you didn't manage to reduce the inference time that's okay. Just report what you do and argue why it fails.
 
-- We're using `Python` as our main programming language (and some libraries in it).
+- Some hint to get you kicking:
 
-- Install `Python3.6` or above (https://realpython.com/installing-python/).
+1. Take a look into `TfidfVectorizer` hyperparameters, what can you change to improve the speed?
 
-- Check it, for example you can run: `python3 --version` or `python --version`.
-  You're okay if the output says it's `Python3.6` or above.
+2. Explore other kind of text vectorizer such as: https://scikit-learn.org/stable/modules/generated/sklearn.feature_extraction.text.CountVectorizer.html.
 
-- Inside the `iykra-model-deployment` directory, please run the following commands to install the libraries:
+3. Do we actually need a `stemmer`? Investigate!
 
-`pip3 install -r requirements.txt`
+4. Are there faster models, e.g. https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.LinearRegression.html?
 
-- If the above doesn't work, try:
+5. Is there any unmeaningful words we can remove in preprocessing? Google `"stopwords"`.
 
-`pip install -r requirements.txt`
-
-- (Optional) If you're familiar with `virtualenv`, run the above command inside your virtual environment.
-  Please refer here: https://www.petanikode.com/python-virtualenv/.
-
-- Run:
-
-`cp env.sample .env`
-
-`python3 app.py` or `python app.py`
-
-- See if it's running okay. If it's running okay then run this on your terminal:
-
-```
-curl --location --request POST 'http://localhost:5000/classify' \
---header 'Content-Type: application/json' \
---data-raw '{
-    "text": "im glad ur doing well"
-}'
-```
-
-- You should see this output as the result:
-
-```
-{
-  "data": {
-    "sentiment": "positive",
-    "text": "im glad ur doing well"
-  }
-}
-```
-
-- You can change the value of the `text` field with any English sentence to see the predicted sentiment.
-
-- Alternatively, if the above doesn't work for you, you can access the model that I've deployed on `Heroku` by running this command:
-
-```
-curl --location --request POST 'https://iykra-sentiment-analysis-geral.herokuapp.com/classify' \
---header 'Content-Type: application/json' \
---data-raw '{
-    "text": "im glad ur doing well"
-}'
-```
-
-### Postman
-
-- We will use `Postman` to test our deployed ML model.
-
-- Install `Postman` (https://learning.postman.com/docs/getting-started/installation-and-updates/).
-
-### Heroku
-
-- Please create a `Heroku` account: (https://www.heroku.com/).
-
-- Install `Heroku CLI` (https://devcenter.heroku.com/articles/heroku-command-line).
-
-- (Optional): Read these two amazing resources on deploying Flask to Heroku:
-
-https://stackabuse.com/deploying-a-flask-application-to-heroku/
-
-https://www.jcchouinard.com/deploy-a-flask-app-on-heroku/
-
-- We will follow closely the above resource in the training session.
-
-### Dataset
-
-Please refer here: https://github.com/geraldzakwan/iykra-sentiment-analysis/tree/main/data.
-
-### Libraries
-
-Get to know about these two main libraries for our project:
-
-- `scikit-learn`
-
-- `flask`
-
-and briefly about these other libraries:
-
-- `pandas`
-
-- `nltk`
-
-- `gunicorn`
+- Some serious note: You shouldn't change too much code! You probably add/remove/change the total of 10 lines at most.
 
 ## Questions
 
-- If you have difficulties or find some errors following the above instructions, please email me (`geraldi.dzakwan@gmail.com`) with email subject: `IYKRA Getting Ready - {Your name}`, e.g. `IYKRA Getting Ready - Geraldi Dzakwan`.
+- If you have questions or have difficulties with the assignment, please email me (`geraldi.dzakwan@gmail.com`) with email subject: `IYKRA Assignment - {Your name}`, e.g. `IYKRA Assignment - Geraldi Dzakwan`.
 
-- Explain your difficulties/errors and provide screenshot if any.
-
-- Thanks and see you Friday!
+- Thanks and good luck!
 
 Cheers,
 
