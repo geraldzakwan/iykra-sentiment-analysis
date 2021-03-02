@@ -7,11 +7,6 @@ from dotenv import load_dotenv
 from flask import Flask, request, jsonify
 from config import FEATURE_EXTRACTOR_FILEPATH, CLASSIFIER_FILEPATH, LABELS
 
-dotenv_path = join(dirname(__file__), '.env')
-load_dotenv(dotenv_path)
-
-deploy_env = environ.get("DEPLOY_ENV")
-
 app = Flask(__name__)
 
 with open(FEATURE_EXTRACTOR_FILEPATH, 'rb') as infile:
@@ -68,4 +63,10 @@ def classify():
     return reply_error(code=400, message="Text is not specified")
 
 if __name__ == "__main__":
-    app.run(threaded=True, port=5000, debug=False)
+    dotenv_path = join(dirname(__file__), '.env')
+    load_dotenv(dotenv_path)
+
+    port = int(environ.get("PORT"))
+    debug = environ.get("DEBUG")
+    
+    app.run(threaded=True, port=port, debug=debug)

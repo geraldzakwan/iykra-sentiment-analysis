@@ -42,7 +42,9 @@ This repo is used as a resource for model deployment sharing at `IYKRA` (https:/
 - (Optional) If you're familiar with `virtualenv`, run the above command inside your virtual environment.
   Please refer here: https://www.petanikode.com/python-virtualenv/.
 
-- Try to run:
+- Run:
+
+`cp env.sample .env`
 
 `python3 app.py` or `python app.py`
 
@@ -54,6 +56,17 @@ curl --location --request POST 'http://localhost:5000/classify' \
 --data-raw '{
     "text": "im glad ur doing well"
 }'
+```
+
+- You should see this output as the result:
+
+```
+{
+  "data": {
+    "sentiment": "positive",
+    "text": "im glad ur doing well"
+  }
+}
 ```
 
 ### Postman
