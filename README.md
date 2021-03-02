@@ -103,7 +103,23 @@ https://www.jcchouinard.com/deploy-a-flask-app-on-heroku/
 
 ### Dataset
 
-- Please refer here: https://github.com/geraldzakwan/iykra-sentiment-analysis/tree/main/data.
+Please refer here: https://github.com/geraldzakwan/iykra-sentiment-analysis/tree/main/data.
+
+### Libraries
+
+Get to know about these two main libraries for our project:
+
+- `scikit-learn`
+
+- `flask`
+
+and briefly about these other libraries:
+
+- `pandas`
+
+- `nltk`
+
+- `gunicorn`
 
 ## Questions
 
