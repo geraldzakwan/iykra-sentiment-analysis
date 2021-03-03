@@ -8,7 +8,9 @@ This repo is used as a resource for model deployment sharing at `IYKRA` (https:/
 
 ### Git
 
-- You will use Git to access this code base and to submit the assignment later.
+- You will use Git (and GitHub) to access this code base and to submit the assignment later.
+
+- Create a GitHub account (https://github.com/)
 
 - Install Git: https://www.atlassian.com/git/tutorials/install-git.
 
@@ -16,11 +18,13 @@ This repo is used as a resource for model deployment sharing at `IYKRA` (https:/
 
 - (Optional) If you want to dive deeper: https://towardsdatascience.com/getting-started-with-git-and-github-6fcd0f2d4ac6.
 
-- Clone this repo by running the following command inside your terminal:
+- Fork this repo, follow the instruction here: https://docs.github.com/en/github/getting-started-with-github/fork-a-repo)
 
-`git clone https://github.com/geraldzakwan/iykra-sentiment-analysis`
+- Clone the forked repo by running the following command inside your terminal:
 
-- It will create `iykra-sentiment-analysis` directory, please remember the path to this directory.
+`git clone https://github.com/{Your-GitHub-username}/iykra-sentiment-analysis`
+
+- It will create `iykra-sentiment-analysis` directory in your local machine, please remember the path to this directory.
 
 ### Python
 
@@ -28,7 +32,7 @@ This repo is used as a resource for model deployment sharing at `IYKRA` (https:/
 
 - Install `Python3.6` or above (https://realpython.com/installing-python/).
 
-- Check it, for example you can run: `python3 --version` or `python --version`.
+- Check it, for example you can run: `python3 --version` or `python --version` in your terminal.
   You're okay if the output says it's `Python3.6` or above.
 
 - Inside the `iykra-model-deployment` directory, please run the following commands to install the libraries:
