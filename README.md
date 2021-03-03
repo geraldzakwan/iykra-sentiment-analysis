@@ -51,9 +51,9 @@ This repo is used as a resource for model deployment sharing at `IYKRA` (https:/
 
 - Please create a `Heroku` account: (https://www.heroku.com/).
 
-- Install `Heroku CLI` (https://devcenter.heroku.com/articles/heroku-command-line).
+- (Optional) Install `Heroku CLI` (https://devcenter.heroku.com/articles/heroku-command-line).
 
-- (Optional): Read these two amazing resources on deploying Flask to Heroku:
+- (Optional) Read these two amazing resources on deploying Flask to Heroku:
 
 https://stackabuse.com/deploying-a-flask-application-to-heroku/
 
