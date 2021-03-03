@@ -35,7 +35,7 @@ This repo is used as a resource for model deployment sharing at `IYKRA` (https:/
 - Check it, for example you can run: `python3 --version` or `python --version` in your terminal.
   You're okay if the output says it's `Python3.6` or above.
 
-- Inside the `iykra-model-deployment` directory, please run the following commands to install the libraries:
+- Inside the `iykra-sentiment-analysis` directory, please run the following commands to install the libraries:
 
 `pip3 install -r requirements.txt`
 
