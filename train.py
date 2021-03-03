@@ -1,6 +1,6 @@
 import time
 import pickle
-import pandas as pd
+import numpy as np
 
 from sklearn.model_selection import train_test_split
 from sklearn.feature_extraction.text import TfidfVectorizer
@@ -12,14 +12,16 @@ import preprocess as pr
 
 # This function is speficic for Sentiment140 dataset
 def load_dataset():
-    df = pd.read_csv(DATA_FILEPATH, encoding='ISO-8859-1', header=None)
+    # Read data/tweets_100k/positive.txt
+    with open(DATA_FILEPATH + "/positive.txt", "r") as infile:
+        positive_tweets = infile.readlines()
 
-    # Column 5 is the tweet
-    X = df.iloc[:, 5].values
-    X = pd.Series(X)
+    # Do the same with negative tweets
+    with open(DATA_FILEPATH + "/negative.txt", "r") as infile:
+        negative_tweets = infile.readlines()
 
-    # Column 0 is the label (positive/negative)
-    y = df.iloc[:, 0].values
+    X = positive_tweets + negative_tweets
+    y = np.concatenate([np.full(len(negative_tweets), 0), np.full(len(positive_tweets), 4)])
 
     return X, y
 
@@ -28,7 +30,7 @@ def prepare_data(X, y, test_size):
     # 80/20 train test split
     X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=test_size, random_state=28)
 
-    # Preprocess pipeline (see preprocess.py)
+    # Preprocess pipeline (see preprocess.py), convert sentences to their numerical representation
     X_train = [pr.preprocess(tweet, do_stem=True) for tweet in X_train]
     X_test = [pr.preprocess(tweet, do_stem=True) for tweet in X_test]
 

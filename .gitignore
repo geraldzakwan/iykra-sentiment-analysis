@@ -3,4 +3,4 @@
 *__pycache__*
 *.sqlite3
 .env
-data/tweets.csv
+data/tweets_full.csv.zip

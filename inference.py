@@ -7,8 +7,9 @@ from config import DATA_FILEPATH, FEATURE_EXTRACTOR_FILEPATH, CLASSIFIER_FILEPAT
 
 if __name__ == '__main__':
     total_time = 0
+    runs = int(sys.argv[1])
 
-    for i in range(0, int(sys.argv[1])):
+    for i in range(0, runs):
         # To log the inference time
         start = time.time()
 
@@ -38,5 +39,5 @@ if __name__ == '__main__':
 
         total_time += time.time() - start
 
-    print("Your average inference time is: {} seconds".format(total_time/int(sys.argv[1])))
+    print("Your average inference time over {} runs is: {} seconds".format(runs, total_time/int(sys.argv[1])))
     print("*"*50)
