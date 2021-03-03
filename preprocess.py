@@ -8,6 +8,9 @@ def preprocess(tweet, do_stem=True):
     # Remove all quotations: ' and "
     tweet = tweet.strip('\'"')
 
+    # Remove newlines
+    tweet = tweet.strip('\n')
+
     # Convert links in the form of www.* or https?://* to "URL"
     # e.g. www.google.com -> "URL". Why?
     tweet = re.sub('((www\.[^\s]+)|(https?://[^\s]+))','URL',tweet)
