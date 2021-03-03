@@ -33,13 +33,18 @@ This repo is used as a resource for model deployment sharing at `IYKRA` (https:/
 - Install `Python3.6` or above (https://realpython.com/installing-python/).
 
 - Check it, for example you can run: `python3 --version` or `python --version` in your terminal.
-  You're okay if the output says it's `Python3.6` or above.
+
+- You're okay if the output says it's `Python3.6` or above.
 
 ### IDE
 
 - Install your favorite `IDE`, mine is `Atom` (https://atom.io/). Atom is very light (got it?)!
 
-- Some other alternatives are `PyCharm` (https://www.jetbrains.com/pycharm/) and `Microsoft Visual Studio` (https://visualstudio.microsoft.com/).
+- Some other alternatives are:
+
+1. `PyCharm` (https://www.jetbrains.com/pycharm/)
+
+2. `Microsoft Visual Studio` (https://visualstudio.microsoft.com/)
 
 ### Postman
 
@@ -55,11 +60,11 @@ This repo is used as a resource for model deployment sharing at `IYKRA` (https:/
 
 - (Optional) Read these two amazing resources on deploying Flask to Heroku:
 
-https://stackabuse.com/deploying-a-flask-application-to-heroku/
+1. https://stackabuse.com/deploying-a-flask-application-to-heroku/
 
-https://www.jcchouinard.com/deploy-a-flask-app-on-heroku/
+2. https://www.jcchouinard.com/deploy-a-flask-app-on-heroku/
 
-- We will follow closely the above resource in the training session.
+- We will follow closely the above resource in the hands on session.
 
 ### Setting Up Environment
 
@@ -72,15 +77,16 @@ https://www.jcchouinard.com/deploy-a-flask-app-on-heroku/
 `pip install -r requirements.txt`
 
 - (Optional) If you're familiar with `virtualenv`, run the above command inside your virtual environment.
-  Please refer here: https://www.petanikode.com/python-virtualenv/.
 
-- Run:
+- Please refer here: https://www.petanikode.com/python-virtualenv/.
+
+- Run the two commands below in your terminal (create environment file `.env` and run the `app`!):
 
 `cp env.sample .env`
 
 `python3 app.py` or `python app.py`
 
-- See if it's running okay. You should see the following output:
+- Check if it's running okay. You should see the following output:
 
 ```
 Geral-MacBook-Pro:iykra-sentiment-analysis geral$ python3.6 app.py
@@ -92,7 +98,7 @@ Geral-MacBook-Pro:iykra-sentiment-analysis geral$ python3.6 app.py
  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
  ```
 
-- If it's running okay then run this on your terminal:
+- If it's running okay then hit your API by running this `curl` command on your terminal:
 
 ```
 curl --location --request POST 'http://localhost:5000/classify' \
@@ -124,6 +130,8 @@ curl --location --request POST 'https://iykra-sentiment-analysis-geral.herokuapp
     "text": "im glad ur doing well"
 }'
 ```
+
+- Our goal for this hands on session is to get your model deployed in `Heroku` just like the above.
 
 ### Dataset
 
