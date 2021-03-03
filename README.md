@@ -87,7 +87,7 @@ curl --location --request POST 'https://iykra-sentiment-analysis-geral.herokuapp
 
 ### IDE
 
-- Install your favorite `IDE`, mine is `Atom` (https://atom.io/). Atom is very light (got it?)!.
+- Install your favorite `IDE`, mine is `Atom` (https://atom.io/). Atom is very light (got it?)!
 
 - Some other alternatives are `PyCharm` (https://www.jetbrains.com/pycharm/) and `Microsoft Visual Studio` (https://visualstudio.microsoft.com/).
 
