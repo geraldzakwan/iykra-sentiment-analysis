@@ -5,7 +5,7 @@ import pickle
 from train import load_dataset, extract_feature, predict, get_pred_statistics
 from config import DATA_FILEPATH, FEATURE_EXTRACTOR_FILEPATH, CLASSIFIER_FILEPATH
 
-if __name__ == '__main__':
+def main():
     total_time = 0
     runs = int(sys.argv[1])
 
@@ -41,3 +41,6 @@ if __name__ == '__main__':
 
     print("Your average inference time over {} runs is: {} seconds".format(runs, total_time/int(sys.argv[1])))
     print("*"*50)
+
+if __name__ == '__main__':
+    main()

@@ -72,8 +72,7 @@ def save(feat_ext, cls, cls_filepath=CLASSIFIER_FILEPATH, feat_ext_filepath=FEAT
     with open(cls_filepath, 'wb') as outfile:
         pickle.dump(cls, outfile, protocol=pickle.HIGHEST_PROTOCOL)
 
-
-if __name__ == '__main__':
+def main():
     # To log the training time
     start = time.time()
 
@@ -127,3 +126,6 @@ if __name__ == '__main__':
 
     print("*"*50)
     print()
+
+if __name__ == '__main__':
+    main()
