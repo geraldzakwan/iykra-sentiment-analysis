@@ -35,6 +35,34 @@ This repo is used as a resource for model deployment sharing at `IYKRA` (https:/
 - Check it, for example you can run: `python3 --version` or `python --version` in your terminal.
   You're okay if the output says it's `Python3.6` or above.
 
+### IDE
+
+- Install your favorite `IDE`, mine is `Atom` (https://atom.io/). Atom is very light (got it?)!
+
+- Some other alternatives are `PyCharm` (https://www.jetbrains.com/pycharm/) and `Microsoft Visual Studio` (https://visualstudio.microsoft.com/).
+
+### Postman
+
+- We will use `Postman` to test our deployed ML model.
+
+- Install `Postman` (https://learning.postman.com/docs/getting-started/installation-and-updates/).
+
+### Heroku
+
+- Please create a `Heroku` account: (https://www.heroku.com/).
+
+- Install `Heroku CLI` (https://devcenter.heroku.com/articles/heroku-command-line).
+
+- (Optional): Read these two amazing resources on deploying Flask to Heroku:
+
+https://stackabuse.com/deploying-a-flask-application-to-heroku/
+
+https://www.jcchouinard.com/deploy-a-flask-app-on-heroku/
+
+- We will follow closely the above resource in the training session.
+
+### Setting Up Environment
+
 - Inside the `iykra-sentiment-analysis` directory, please run the following commands to install the libraries:
 
 `pip3 install -r requirements.txt`
@@ -52,7 +80,19 @@ This repo is used as a resource for model deployment sharing at `IYKRA` (https:/
 
 `python3 app.py` or `python app.py`
 
-- See if it's running okay. If it's running okay then run this on your terminal:
+- See if it's running okay. You should see the following output:
+
+```
+Geral-MacBook-Pro:iykra-sentiment-analysis geral$ python3.6 app.py
+ * Serving Flask app "app" (lazy loading)
+ * Environment: production
+   WARNING: This is a development server. Do not use it in a production deployment.
+   Use a production WSGI server instead.
+ * Debug mode: off
+ * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+ ```
+
+- If it's running okay then run this on your terminal:
 
 ```
 curl --location --request POST 'http://localhost:5000/classify' \
@@ -84,32 +124,6 @@ curl --location --request POST 'https://iykra-sentiment-analysis-geral.herokuapp
     "text": "im glad ur doing well"
 }'
 ```
-
-### IDE
-
-- Install your favorite `IDE`, mine is `Atom` (https://atom.io/). Atom is very light (got it?)!
-
-- Some other alternatives are `PyCharm` (https://www.jetbrains.com/pycharm/) and `Microsoft Visual Studio` (https://visualstudio.microsoft.com/).
-
-### Postman
-
-- We will use `Postman` to test our deployed ML model.
-
-- Install `Postman` (https://learning.postman.com/docs/getting-started/installation-and-updates/).
-
-### Heroku
-
-- Please create a `Heroku` account: (https://www.heroku.com/).
-
-- Install `Heroku CLI` (https://devcenter.heroku.com/articles/heroku-command-line).
-
-- (Optional): Read these two amazing resources on deploying Flask to Heroku:
-
-https://stackabuse.com/deploying-a-flask-application-to-heroku/
-
-https://www.jcchouinard.com/deploy-a-flask-app-on-heroku/
-
-- We will follow closely the above resource in the training session.
 
 ### Dataset
 
