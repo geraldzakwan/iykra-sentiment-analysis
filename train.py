@@ -20,7 +20,7 @@ def load_dataset():
     with open(DATA_FILEPATH + "/negative.txt", "r") as infile:
         negative_tweets = infile.readlines()
 
-    X = positive_tweets + negative_tweets
+    X = negative_tweets + positive_tweets
     y = np.concatenate([np.full(len(negative_tweets), 0), np.full(len(positive_tweets), 4)])
 
     return X, y
