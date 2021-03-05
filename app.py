@@ -55,10 +55,11 @@ def classify():
         # IMPORTANT: classifier.predict returns an array, so get the first element
         label = app.classifier.predict(app.feature_extractor.transform([text]))[0]
 
-        return reply_success(data={
-            'text': text,
-            'sentiment': LABELS[label]
-        })
+        # EXERCISE 10: Return something like: {'text': text, 'sentiment':...}
+        # return reply_success(data={
+        #     ...,
+        #     ...
+        # })
 
     return reply_error(code=400, message="Text is not specified")
 

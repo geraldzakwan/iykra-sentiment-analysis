@@ -63,11 +63,11 @@ def stem(tweet):
     # NOTE: You can play with this, i.e. try other stemmer types!
     stemmer = nltk.stem.PorterStemmer()
 
-    # Simply tokenize by space
-    words = [word for word in tweet.split()]
+    # EXERCISE 1: Simply tokenize by space
+    # words = ...
 
-    # Stem each token
-    words = [stemmer.stem(w) for w in words]
+    # EXERCISE 2: Stem each token
+    # words = ...
 
     # Rejoin them
     return ' '.join(words)

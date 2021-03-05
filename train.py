@@ -27,8 +27,8 @@ def load_dataset():
 
 # Train test split and preprocess
 def prepare_data(X, y, test_size):
-    # 80/20 train test split
-    X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=test_size, random_state=28)
+    # EXERCISE 3: Do 80/20 train test split
+    # X_train, X_test, y_train, y_test = ...
 
     # Preprocess pipeline (see preprocess.py), convert sentences to their numerical representation
     X_train = [pr.preprocess(tweet, do_stem=True) for tweet in X_train]
@@ -37,18 +37,24 @@ def prepare_data(X, y, test_size):
     return X_train, X_test, y_train, y_test
 
 def extract_feature(X, vec, fit):
+    # EXERCISE 4: transform feature
     # Fit means that we train our extractor using the data (do this with train data)
     if fit:
-        return vec.fit_transform(X)
+        # return vec.
+        pass
 
     # No fit means that we only apply extraction to the data (do this with test data)
-    return vec.transform(X)
+    # return vec.
 
 def train(cls, X, y):
-    return cls.fit(X, y)
+    # EXERCISE 5: Train classifier cls
+    # return cls.
+    pass
 
 def predict(cls, X):
-    return cls.predict(X)
+    # EXERCISE 6: Predict X
+    # return cls.
+    pass
 
 def get_pred_statistics(y, pred):
     print("Accuracy: {:.2f}".format(metrics.accuracy_score(y, pred)*100))
@@ -66,11 +72,14 @@ def get_pred_statistics(y, pred):
 
 # Save both the feature extractor and the classifier with pickle
 def save(feat_ext, cls, cls_filepath=CLASSIFIER_FILEPATH, feat_ext_filepath=FEATURE_EXTRACTOR_FILEPATH):
+    # EXERCISE 7: Save feature extractor and classifier
     with open(feat_ext_filepath, 'wb') as outfile:
-        pickle.dump(feat_ext, outfile, protocol=pickle.HIGHEST_PROTOCOL)
+        # pickle.dump(...)
+        pass
 
     with open(cls_filepath, 'wb') as outfile:
-        pickle.dump(cls, outfile, protocol=pickle.HIGHEST_PROTOCOL)
+        # pickle.dump(...)
+        pass
 
 
 if __name__ == '__main__':
@@ -81,16 +90,14 @@ if __name__ == '__main__':
 
     X_train, X_test, y_train, y_test = prepare_data(X, y, test_size=0.2)
 
-    # Use TF-IDF as feature extractor
-    # NOTE: You can play with this, i.e. try other extractors or change hyperparameters!
-    extractor = TfidfVectorizer(min_df=5, use_idf=True, ngram_range=(1, 4))
+    # EXERCISE 8: Use TF-IDF as feature extractor
+    # extractor = ...
 
     # Apply feature extractor, e.g. TF-IDF, on train data
     X_train_vec = extract_feature(X_train, extractor, fit=True)
 
-    # Define your classifier, e.g. Naive Bayes
-    # NOTE: You can play with this, i.e. try other classifiers or change hyperparameters!
-    classifier = MultinomialNB()
+    # EXERCISE 9: Define your classifier, e.g. Naive Bayes
+    # classifier = ...
 
     train(classifier, X_train_vec, y_train)
 
